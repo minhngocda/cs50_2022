@@ -1,5 +1,5 @@
 x = int(input('Height: '))
-    while 0 < x and x < 9:
+    while (0 < x and x < 9):
         break
 for i in range (x):
     for k in range (x - 1):

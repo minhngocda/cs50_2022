@@ -1,7 +1,4 @@
 while True:
-    x = input('Height: ')
-    try:
-        x = int(x)
-        break
-    finally:
-
+        x = input('Height: ')
+        if x.isdigit():
+            break

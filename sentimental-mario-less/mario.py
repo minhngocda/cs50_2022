@@ -1,6 +1,6 @@
 while True:
-        x = input('Height: ')
-        if x.is():
+        x = int(input('Height: '))
+        if x.isdigit() and x < 9:
             break
 for i in range (x):
     for k in range (x - 1):

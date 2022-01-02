@@ -3,4 +3,5 @@ while True:
     try:
         x = int(x)
         break
-    
+    finally:
+

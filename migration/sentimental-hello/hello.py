@@ -1,2 +1,3 @@
-x = "What is your name?"
-print(x)
+x = "What is your name?" 
+y = input (x)
+print ("Hello, " + y )

@@ -1,1 +1,2 @@
-print "What is your name?"
+x = "What is your name?"
+print(x)

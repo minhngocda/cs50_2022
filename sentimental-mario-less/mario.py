@@ -1,7 +1,6 @@
 def main():
     height = get_height()
     for i in range(height):
-
         for k in range(height - i):
             print(' ')
         for l in range(i):

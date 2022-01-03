@@ -2,8 +2,8 @@ def main():
     height = get_height()
     for i in range(height):
         #to print space
-        for k in range(height - i + 1):
-            print('', end="")
+        for k in range(height - i - 1):
+            print(' ', end="")
         #to print # and do not break to new line
         for l in range(i +1):
             print("#", end="")

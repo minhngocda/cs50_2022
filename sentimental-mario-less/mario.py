@@ -8,7 +8,7 @@ def main():
         for l in range(i +1):
             print("#", end="")
         #to print a new line
-        print(" ")
+        print("")
 
 def get_height():
     while True:

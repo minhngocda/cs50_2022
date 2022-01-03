@@ -5,7 +5,7 @@ def main():
          #   print(' ')
         #for l in range(i):
           #  print("#")
-        print("#")
+        print("#" , end="")
 
 def get_height():
     while True:

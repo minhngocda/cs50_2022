@@ -2,7 +2,7 @@ from cs50 import get_float
 def get_input():
     while True:
         try:
-            n = float("Change owed: ")
+            n = float(input("Change owed: "))
             if n > 0:
                 break
         except ValueError:

@@ -2,6 +2,7 @@ from cs50 import get_string
 
 def main():
     x = count_letter(get_input())
+    L = count_words(get_input())
 
 def count_letter(x):
     #x = get_input()

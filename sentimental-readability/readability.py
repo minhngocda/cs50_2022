@@ -12,6 +12,10 @@ def count_letter(x):
     return count_letter
 
 def count_words(x):
+    count_word = 0
+    for i in x:
+        if i = " "
+            count_word += 1
 
 
 

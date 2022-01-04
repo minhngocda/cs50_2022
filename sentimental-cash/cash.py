@@ -1,5 +1,6 @@
 from cs50 import get_float
 
+
 def main():
     cash = get_input() * 100
     a = cash // 25
@@ -21,5 +22,6 @@ def get_input():
         except ValueError:
             print("That's not desired value!")
     return n
+
 
 main()

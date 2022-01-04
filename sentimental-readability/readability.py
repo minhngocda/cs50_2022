@@ -2,11 +2,11 @@ from cs50 import get_string
 
 def main():
     x = count_letter(get_input())
-    L = count_words(get_input())
-    S = count_sentence(get_input())
+    #L = count_words(get_input())
+    #S = count_sentence(get_input())
     print( x + ' letters')
-    print( L + ' words')
-    print( S + ' sentences')
+    #print( L + ' words')
+    #print( S + ' sentences')
 
 def count_letter(x):
     count_letter = 0

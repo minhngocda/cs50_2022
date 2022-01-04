@@ -1,8 +1,9 @@
 from cs50 import get_float
 
 def main():
-    cash = get_input()
-    
+    cash = round(get_input(), 2)
+    print(cash)
+
 
 def get_input():
     while True:
@@ -12,4 +13,4 @@ def get_input():
                 break
         except ValueError:
             print("That's not desired value!")
-get_input()
+main()

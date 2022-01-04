@@ -32,7 +32,7 @@ def count_words(x):
 def count_sentence(x):
     sentence = 0
     for i in x:
-        if ((i.isalpha()) and ((x[i+1] == '.') or (x[i+1] == '!') or (x[i+1]) == '?')):
+        if ((i.isalpha()) and ((str(x[i+1]) == '.') or (str(x[i+1]) == '!') or (str(x[i+1])) == '?')):
             sentence += 1
     return sentence
 

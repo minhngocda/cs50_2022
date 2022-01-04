@@ -4,7 +4,7 @@ def main():
     x = get_input
     count_letter = 0
     for i in x:
-        if i =
+        if i = i.isalpha()
             count_letter+=1
 
 

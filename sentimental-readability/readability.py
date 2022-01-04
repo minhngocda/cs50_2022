@@ -19,6 +19,9 @@ def count_words(x):
             count_space += 1
     if count_space =! 0:
         count_word = count_space + 1
+    else:
+        if count_letter(x) > 0:
+            
 
 
 

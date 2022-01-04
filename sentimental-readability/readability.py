@@ -9,14 +9,13 @@ def main():
     print( S + ' sentences')
 
 def count_letter(x):
-    #x = get_input()
     count_letter = 0
     for i in x:
         if i.isalpha():
             count_letter += 1
     return count_letter
 
-def count_words(x):
+#def count_words(x):
     word = 0
     count_space = 0
     for i in x:
@@ -29,7 +28,7 @@ def count_words(x):
             word = 1
     return word
 
-def count_sentence(x):
+#def count_sentence(x):
     sentence = 0
     for i in x:
         if i.isalpha() and (str(i+1) == '.' or str(i+1) == '!' or str(i+1) == '?'):

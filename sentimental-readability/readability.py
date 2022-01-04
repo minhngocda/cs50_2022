@@ -2,12 +2,9 @@ from cs50 import get_string
 
 
 def main():
-    count
-def count_letter():
-    
+    print(len(get_input))
+
 def get_input():
     answer = get_string("Text: ")
-    #print (answer)
 
-
-get_input()
+main()

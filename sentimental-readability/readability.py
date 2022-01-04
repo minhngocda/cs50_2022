@@ -1,8 +1,7 @@
 from cs50 import get_string
 
 def main():
-    count_letter(get_input())
-    print
+    x = count_letter(get_input())
 
 def count_letter(x):
     #x = get_input()
@@ -12,7 +11,7 @@ def count_letter(x):
             count_letter += 1
     return count_letter
 
-#def count_words():
+def count_words(x):
 
 
 

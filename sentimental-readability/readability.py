@@ -32,7 +32,7 @@ def count_words(x):
 def count_sentence(x):
     sentence = 0
     for i in x:
-        if (i.isalpha() and 
+        if i.isalpha() and :
             sentence += 1
     return sentence
 

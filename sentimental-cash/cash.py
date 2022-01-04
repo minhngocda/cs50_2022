@@ -2,7 +2,7 @@ from cs50 import get_float
 
 def main():
     cash = get_input()
-    print(cash)
+    a = cash 
 
 
 def get_input():

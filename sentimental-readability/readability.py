@@ -21,6 +21,8 @@ def count_words(x):
         word = count_space + 1
     else:
         if count_letter(x) > 0:
+            word = 1
+    return word
 
 
 

@@ -12,16 +12,16 @@ def count_letter(x):
     return count_letter
 
 def count_words(x):
-    count_word = 0
+    word = 0
     count_space = 0
     for i in x:
         if i = " ":
             count_space += 1
     if count_space =! 0:
-        count_word = count_space + 1
+        word = count_space + 1
     else:
         if count_letter(x) > 0:
-            
+
 
 
 

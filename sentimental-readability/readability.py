@@ -1,12 +1,13 @@
 from cs50 import get_string
 
 def main():
-    x = count_letter(get_input())
-    L = count_words(get_input())
-    #S = count_sentence(get_input())
+    text = get_input()
+    x = count_letter(text)
+    L = count_words(text)
+    S = count_sentence(text)
     print( x )
     print(L)
-    #print( S + ' sentences')
+    print(S)
 
 def count_letter(x):
     count_letter = 0
@@ -28,7 +29,7 @@ def count_words(x):
             word = 1
     return word
 
-#def count_sentence(x):
+def count_sentence(x):
     sentence = 0
     for i in x:
         if i.isalpha() and (str(i+1) == '.' or str(i+1) == '!' or str(i+1) == '?'):

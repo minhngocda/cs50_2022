@@ -1,7 +1,7 @@
 from cs50 import get_float
 
 def main():
-    cash = get_input() * 100
+    cash = int(get_input()) * 100
     a = cash // 25
     b = cash % 25
     c = b // 10

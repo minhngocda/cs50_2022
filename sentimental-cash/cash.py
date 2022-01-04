@@ -8,7 +8,7 @@ def main():
     d = b % 10
     e = d // 5
     f = d % 5
-    out_put = sum(a,c, e, f)
+    out_put = int(a + c + e + f)
     print(out_put)
 
 

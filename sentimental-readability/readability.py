@@ -2,7 +2,7 @@ from cs50 import get_string
 
 def main():
     text = get_input
-    x = len(text)
+    x = count(text)
     print (x)
 
 def get_input():

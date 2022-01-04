@@ -3,6 +3,7 @@ from cs50 import get_float
 def main():
     cash = get_input()
     
+
 def get_input():
     while True:
         try:

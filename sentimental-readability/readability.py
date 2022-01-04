@@ -5,7 +5,7 @@ def main():
     count_letter = 0
     for i in x:
         if i =
-        
+            count_letter+=1
 
 
 def get_input():

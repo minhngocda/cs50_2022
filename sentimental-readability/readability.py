@@ -4,7 +4,7 @@ def main():
     x = count_letter(get_input())
     #L = count_words(get_input())
     #S = count_sentence(get_input())
-    print( x + ' letters')
+    print( x )
     #print( L + ' words')
     #print( S + ' sentences')
 

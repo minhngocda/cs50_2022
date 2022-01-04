@@ -3,7 +3,13 @@ from cs50 import get_float
 def main():
     cash = get_input() * 100
     a = cash // 25
-    b = 
+    b = cash % 25
+    c = b // 10
+    d = b % 10
+    e = d // 5
+    f = d % 5
+    out_put = sum(a,c, e, f)
+    print(out_put)
 
 
 def get_input():
@@ -14,4 +20,5 @@ def get_input():
                 break
         except ValueError:
             print("That's not desired value!")
+
 main()

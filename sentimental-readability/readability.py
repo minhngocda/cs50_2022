@@ -2,10 +2,10 @@ from cs50 import get_string
 
 def main():
     x = count_letter(get_input())
-    #L = count_words(get_input())
+    L = count_words(get_input())
     #S = count_sentence(get_input())
     print( x )
-    #print( L + ' words')
+    print(L)
     #print( S + ' sentences')
 
 def count_letter(x):
@@ -15,7 +15,7 @@ def count_letter(x):
             count_letter += 1
     return count_letter
 
-#def count_words(x):
+def count_words(x):
     word = 0
     count_space = 0
     for i in x:

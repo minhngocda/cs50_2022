@@ -1,7 +1,7 @@
 from cs50 import get_float
 
 def main():
-    cash = round(get_input(), 2)
+    cash = get_input()
     print(cash)
 
 

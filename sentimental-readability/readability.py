@@ -5,9 +5,9 @@ def main():
     x = count_letter(text)
     L = count_words(text)
     S = count_sentence(text)
-    print( x )
-    print(L)
-    print(S)
+    #print( x )
+    #print(L)
+    #print(S)
 
 def count_letter(x):
     count_letter = 0

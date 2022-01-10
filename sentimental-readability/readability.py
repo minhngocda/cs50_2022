@@ -10,7 +10,7 @@ def main():
 
     index = 0.0588 * L - 0.296 * S - 15.8
     #print (index)
-    a = round(index,0)
+    a = int(round(index,0))
     if a < 1:
         print("Before Grade 1")
     elif a > 16:

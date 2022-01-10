@@ -5,10 +5,11 @@ def main():
     x = count_letter(text)
     y = count_words(text)
     z = count_sentence(text)
-    L = x / y
-    S = z / y
+    L = x / y * 100
+    S = z / y * 100
 
-    index = round(0.0588 * L - 0.296 * S - 15.8, 0)
+    index = 0.0588 * L - 0.296 * S - 15.8
+    print (index)
     if index < 1:
         print("Before Grade 1")
     elif index > 16:

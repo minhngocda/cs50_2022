@@ -1,5 +1,6 @@
 from cs50 import get_string
 
+
 def main():
     text = get_input()
     x = count_letter(text)
@@ -10,7 +11,7 @@ def main():
 
     index = 0.0588 * L - 0.296 * S - 15.8
     #print (index)
-    a = int(round(index,0))
+    a = int(round(index, 0))
     if a < 1:
         print("Before Grade 1")
     elif a > 16:
@@ -18,8 +19,9 @@ def main():
     else:
         print("Grade ", a)
     #print( x )
-    #print(L)
-    #print(S)
+    # print(L)
+    # print(S)
+
 
 def count_letter(x):
     count_letter = 0
@@ -27,6 +29,7 @@ def count_letter(x):
         if i.isalpha():
             count_letter += 1
     return count_letter
+
 
 def count_words(x):
     word = 0
@@ -41,6 +44,7 @@ def count_words(x):
             word = 1
     return word
 
+
 def count_sentence(x):
     sentence = 0
     a = x.count('.')
@@ -53,5 +57,6 @@ def count_sentence(x):
 def get_input():
     answer = get_string("Text: ")
     return answer
+
 
 main()

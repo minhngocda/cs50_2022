@@ -11,7 +11,7 @@ def main():
     index = round(0.0588 * L - 0.296 * S - 15.8, 0)
     if index < 1:
         print("Before Grade 1")
-    else: if index > 16:
+    elif index > 16:
         print("Grade 16+")
     else:
         print("Grade ", x)

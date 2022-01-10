@@ -31,9 +31,10 @@ def count_words(x):
 
 def count_sentence(x):
     sentence = 0
-    for i in x:
-        if i.isalpha() and :
-            sentence += 1
+    a = x.count('.')
+    b = x.count('?')
+    c = x.count('!')
+    sentence = a + b + c
     return sentence
 
 

@@ -5,8 +5,8 @@ def main():
     x = count_letter(text)
     y = count_words(text)
     z = count_sentence(text)
-    L = x * 100 / y
-    S = z * 100 / y
+    L = x / y
+    S = z / y
 
     index = round(0.0588 * L - 0.296 * S - 15.8, 0)
     if index < 1:

@@ -9,7 +9,7 @@ def main():
     S = z / y * 100
 
     index = 0.0588 * L - 0.296 * S - 15.8
-    print (index)
+    #print (index)
     a = round(index,0)
     if a < 1:
         print("Before Grade 1")

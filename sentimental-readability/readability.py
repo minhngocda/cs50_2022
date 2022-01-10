@@ -3,8 +3,18 @@ from cs50 import get_string
 def main():
     text = get_input()
     x = count_letter(text)
-    L = count_words(text)
-    S = count_sentence(text)
+    y = count_words(text)
+    z = count_sentence(text)
+    L = x * 100 / y
+    S = z * 100 / y
+
+    index = round(0.0588 * L - 0.296 * S - 15.8)
+    if index < 1:
+        print("Before Grade 1")
+    if index > 16:
+        print("Grade 16+")
+    else:
+        print("Grade ", x)
     #print( x )
     #print(L)
     #print(S)

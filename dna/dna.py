@@ -1,5 +1,5 @@
 import csv
-import sys
+from sys import argv , exit
 
 
 def main():

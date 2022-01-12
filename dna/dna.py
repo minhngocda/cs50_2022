@@ -13,7 +13,7 @@ def main():
     # TODO: Read database file into a variable
     with open (argv[1], mode = 'r') as databases:
         reader = csv.DictReader(databases)
-        STRs = reader.filename[1:]
+        STRs = reader.filenames[1:]
         for row in reader:
             profiles.append(row)
 

@@ -18,7 +18,13 @@ def main():
             profiles.append(row)
 
     # TODO: Read DNA sequence file into a variable
-
+    with open (argv[2], mode = 'r') as sequences:
+        # Grab first line of txt file
+        sequence = sequences.readline()
+        # Loop over every STR from the database
+        for STR in STRs:
+            # Update the Sequence STR dictionary with max amount of repeats
+            seq_str_count[STR] = find_repeats(sequence, STR)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles

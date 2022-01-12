@@ -25,12 +25,13 @@ def main():
     with open (argv[2], mode = 'r') as sequences:
         # Grab first line of txt file
         sequence = sequences.readline()
-        print(sequence)
 
         # Loop over every STR from the database
         for STR in STRs:
             # Update the Sequence STR dictionary with max amount of repeats
             seq_str_count[STR] = longest_match(sequence, STR)
+        print(seq_str_count)
+
 
 
     # TODO: Find longest match of each STR in DNA sequence

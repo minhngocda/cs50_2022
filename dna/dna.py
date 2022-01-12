@@ -43,6 +43,10 @@ def main():
                 continue
             match_count += 1
 
+    print("------------------")
+    print(match_count)
+    print(len(STRs))
+
     if match_count == len(STRs):
         print(profile['name'])
         exit(0)

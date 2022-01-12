@@ -11,7 +11,7 @@ def main():
     STRs = []
     profiles = []
     # TODO: Read database file into a variable
-
+    open (argv[1], mode = 'r')
 
     # TODO: Read DNA sequence file into a variable
 

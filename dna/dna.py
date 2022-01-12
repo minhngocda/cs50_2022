@@ -38,7 +38,7 @@ def main():
     for profile in profiles:
         match_count = 0
 
-    for STR in STRs:
+        for STR in STRs:
             print(profile[STR])
             print(seq_str_count[STR])
             print("------------------")

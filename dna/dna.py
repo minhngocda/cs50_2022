@@ -8,9 +8,10 @@ def main():
     if len(argv) != 3:
         print("Usage: python dna.py data.csv sequence.txt")
         exit(1)
-
+    STRs = []
+    profiles = []
     # TODO: Read database file into a variable
-    
+
 
     # TODO: Read DNA sequence file into a variable
 

@@ -30,7 +30,7 @@ def main():
         for STR in STRs:
             # Update the Sequence STR dictionary with max amount of repeats
             seq_str_count[STR] = longest_match(sequence, STR)
-        print(seq_str_count)
+
 
 
 
@@ -46,13 +46,9 @@ def main():
                 continue
             match_count += 1
 
-    #print("------------------")
-    #print(match_count)
-    #print(len(STRs))
-
-    if match_count == len(STRs):
-        print(profile['name'])
-        exit(0)
+        if match_count == len(STRs):
+            print(profile['name'])
+            exit(0)
 
     print("No match")
     exit(1)

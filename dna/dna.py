@@ -1,5 +1,5 @@
 import csv
-from sys import argv , exit
+from sys import argv, exit
 
 
 def main():
@@ -11,18 +11,17 @@ def main():
     STRs = []
     profiles = []
     # TODO: Read database file into a variable
-    with open (argv[1], mode = 'r') as databases:
+    with open(argv[1], mode='r') as databases:
         reader = csv.DictReader(databases)
         STRs = reader.fieldnames[1:]
         for row in reader:
             profiles.append(row)
 
-
     # Initialise dictionary for sequence file
     seq_str_count = dict.fromkeys(STRs, 0)
 
     # TODO: Read DNA sequence file into a variable
-    with open (argv[2], mode = 'r') as sequences:
+    with open(argv[2], mode='r') as sequences:
         # Grab first line of txt file
         sequence = sequences.readline()
 
@@ -30,12 +29,6 @@ def main():
         for STR in STRs:
             # Update the Sequence STR dictionary with max amount of repeats
             seq_str_count[STR] = longest_match(sequence, STR)
-
-
-
-
-    # TODO: Find longest match of each STR in DNA sequence
-
 
     # TODO: Check database for matching profiles
     for profile in profiles:

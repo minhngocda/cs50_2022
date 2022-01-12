@@ -40,8 +40,8 @@ def main():
 
     for STR in STRs:
             print(profile[STR])
-            print("------------------")
             print(seq_str_count[STR])
+            print("------------------")
             if int(profile[STR]) != seq_str_count[STR]:
                 continue
             match_count += 1

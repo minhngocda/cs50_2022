@@ -25,6 +25,7 @@ def main():
     with open (argv[2], mode = 'r') as sequences:
         # Grab first line of txt file
         sequence = sequences.readline()
+        print(sequence)
 
         # Loop over every STR from the database
         for STR in STRs:

@@ -39,13 +39,16 @@ def main():
         match_count = 0
 
     for STR in STRs:
+            print(profile[STR])
+            print("------------------")
+            print(seq_str_count[STR])
             if int(profile[STR]) != seq_str_count[STR]:
                 continue
             match_count += 1
 
-    print("------------------")
-    print(match_count)
-    print(len(STRs))
+    #print("------------------")
+    #print(match_count)
+    #print(len(STRs))
 
     if match_count == len(STRs):
         print(profile['name'])

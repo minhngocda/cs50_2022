@@ -47,9 +47,8 @@ def main():
         print(profile['name'])
         exit(0)
 
-    else:
-        print("No match")
-        exit(1)
+    print("No match")
+    exit(1)
 
 
 def longest_match(sequence, subsequence):

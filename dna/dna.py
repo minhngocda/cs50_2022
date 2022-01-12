@@ -28,9 +28,9 @@ def main():
         # Loop over every STR from the database
         for STR in STRs:
             # Update the Sequence STR dictionary with max amount of repeats
-            seq_str_count[STR] = find_repeats(sequence, STR)
+            seq_str_count[STR] = longest_match(sequence, STR)
 
-            
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles

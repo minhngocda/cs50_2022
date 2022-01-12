@@ -16,6 +16,9 @@ def main():
         STRs = reader.fieldnames[1:]
         for row in reader:
             profiles.append(row)
+        print(STRs)
+        print(profiles)
+        print("++++")
 
     # Initialise dictionary for sequence file
     seq_str_count = dict.fromkeys(STRs, 0)

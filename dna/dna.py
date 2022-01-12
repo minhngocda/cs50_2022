@@ -16,12 +16,11 @@ def main():
         STRs = reader.fieldnames[1:]
         for row in reader:
             profiles.append(row)
-        print(STRs)
-        print(profiles)
-        print("++++")
+
 
     # Initialise dictionary for sequence file
     seq_str_count = dict.fromkeys(STRs, 0)
+    print(seq_str_count)
 
     # TODO: Read DNA sequence file into a variable
     with open (argv[2], mode = 'r') as sequences:

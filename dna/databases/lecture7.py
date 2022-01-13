@@ -1,5 +1,4 @@
 import csv
-from sys import argv
 
 with open("small.csv", "r") as file:
     reader = csv.DictReader(file)

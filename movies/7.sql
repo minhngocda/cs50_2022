@@ -4,5 +4,5 @@
 SELECT title, rating
       FROM movies, ratings
       WHERE movie_id = (SELECT id FROM movies WHERE year = 2010)
-      ORDER BY rating ;
+      ORDER BY rating DESC ;
 

@@ -2,4 +2,4 @@
 --Your query should output a table with two columns, one for the title of each movie and one for the rating of each movie.
 --Movies that do not have ratings should not be included in the result.
 SELECT title FROM movies WHERE year = 2010
-SELECT rating FROM ratings WHERE movie_id = (SELECT id FROM movies WHERE year = 2010) ORDER BY rating;
+AND SELECT rating FROM ratings WHERE movie_id = (SELECT id FROM movies WHERE year = 2010) ORDER BY rating;

@@ -3,7 +3,6 @@
 --Movies that do not have ratings should not be included in the result.
 SELECT title, rating
 FROM movies, ratings
-WHERE year = 2010
-and WHERE movie_id = (SELECT id FROM movies WHERE year = 2010)
+WHERE year = 2010 and movie_id = (SELECT id FROM movies WHERE year = 2010)
 ORDER BY rating DESC, title ;
 

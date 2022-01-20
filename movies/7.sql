@@ -2,3 +2,4 @@
 --Your query should output a table with two columns, one for the title of each movie and one for the rating of each movie.
 --Movies that do not have ratings should not be included in the result.
 SELECT title FROM movies AND rating FROM ratings
+    WHERE ....;

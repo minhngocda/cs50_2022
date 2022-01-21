@@ -4,6 +4,6 @@
 --SELECT name FROM people
 --WHERE id = (SELECT person_id FROM stars WHERE movie_id = (SELECT id FROM movies WHERE title = 'Toy Story'));
 SELECT name FROM people
-WHERE people.id = stars.person_id
-AND stars.movie_id = movie.id
+WHERE people.id = (SELECT person_id FROM stars)
+AND stars.movie_id = (SELECT id FROM movies)
 AND movies.title = "Toy Story";

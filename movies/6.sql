@@ -2,6 +2,6 @@
 --Your query should output a table with a single column and a single row (not including the header) containing the average rating.
 SELECT AVG(rating)
 FROM ratings
-INNER JOIN rating ON movies.id = ratings.movie_id
+INNER JOIN ratings ON movies.id = ratings.movie_id
 WHERE movie_id = (SELECT id FROM movies WHERE year = 2012);
 

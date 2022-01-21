@@ -3,9 +3,9 @@
 --You may assume that there is only one movie in the database with the title Toy Story.
 --SELECT name FROM people
 --WHERE id = (SELECT person_id FROM stars WHERE movie_id = (SELECT id FROM movies WHERE title = 'Toy Story'));
-SELECT name FROM people
---WHERE id = (SELECT person_id FROM stars) AND (SELECT movie_id FROM stars) = (SELECT id FROM movies WHERE title = "Toy Story");
 
+--WHERE id = (SELECT person_id FROM stars) AND (SELECT movie_id FROM stars) = (SELECT id FROM movies WHERE title = "Toy Story");
+SELECT name FROM people
 JOIN stars ON people.id = stars.person_id
-   ...> JOIN shows ON stars.show_id = shows.id
-   ...> WHERE title = "Toy Story";
+JOIN movies ON stars.movie_id = movies.id
+WHERE title = "Toy Story";

@@ -4,3 +4,7 @@ SELECT AVG(rating)
 FROM ratings
 INNER JOIN rating ON movies.id = ratings.movie_id
 WHERE movie_id = (SELECT id FROM movies WHERE year = 2012);
+
+JOIN stars ON people.id = stars.person_id
+   ...> JOIN shows ON stars.show_id = shows.id
+   ...> WHERE name = "Steve Carell";

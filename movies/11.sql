@@ -4,4 +4,4 @@
 
 SELECT title FROM movies
 JOIN stars ON people.id = stars.person_id WHERE name = 'Chadwick Boseman'
-JOIN ratings ON ratings.movie_id = movies.id IN ORDER BY;
+JOIN ratings ON ratings.movie_id = movies.id IN ORDER BY rating;

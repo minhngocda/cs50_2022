@@ -3,6 +3,6 @@
 --You may assume that there is only one person in the database with the name Chadwick Boseman.
 
 SELECT title FROM movies
-JOIN people ON people.id = stars.person_id WHERE people.name = 'Chadwick Boseman'
-JOIN stars ON stars.movie_id = 
+JOIN people ON people.id = stars.person_id WHERE name = 'Chadwick Boseman'
+JOIN stars ON stars.movie_id = movies.id
 JOIN ratings ON ratings.movie_id = movies.id IN ORDER BY ratings.rating DESC LIMIT 5;

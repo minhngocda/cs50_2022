@@ -5,4 +5,7 @@
 --If a person appeared in more than one movie in 2004, they should only appear in your results once.
 SELECT name FROM people
 JOIN stars ON people.id = stars.person_id
-JOIN movies ON movies.id = stars.movie_id WHERE year = 2004;
+JOIN movies ON movies.id = stars.movie_id WHERE year = 2004
+DupPerson = ROW_NUMBER() OVER (PARTITION BY id FROM people)
+WHERE DupRank > 1
+ORDER BY birth;

@@ -7,5 +7,5 @@ SELECT name FROM people
 JOIN stars ON people.id = stars.person_id
 JOIN movies ON movies.id = stars.movie_id WHERE year = 2004
 DupPerson = ROW_NUMBER() OVER (PARTITION BY id FROM people)
-WHERE DupRank > 1
+DELETE name WHERE DupPerson > 1
 ORDER BY birth;

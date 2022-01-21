@@ -3,5 +3,6 @@
 SELECT AVG(rating)
 FROM ratings
 INNER JOIN ratings ON movies.id = ratings.movie_id
-WHERE movie_id = (SELECT id FROM movies WHERE year = 2012);
+JOIN movies ON ratings.movie_id = movies.id
+WHERE year = 2012;
 

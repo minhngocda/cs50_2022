@@ -11,10 +11,11 @@ select passport_number,name from people
 inner join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10
-where id = (select person_id from bank_accounts
-join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
+
+where id = select person_id from bank_accounts
+inner join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
 where atm_transactions.month = 7 and atm_transactions.day = 28 and atm_transactions.year = 2021
-and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transaction_type = 'withdraw');
+and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transaction_type = 'withdraw';
 
 --I don't know the thief's name, but it was someone I recognized. Earlier this morning,
 --before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.

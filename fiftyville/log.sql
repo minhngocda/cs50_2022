@@ -22,3 +22,6 @@ where account_number = (select account_number from atm_transactions where month 
 and atm_location = 'Leggett Street' and transaction_type = 'withdraw');
 
 select transcript from interviews where month = 7 and day = 28 and year = 2021;
+
+select person_id from bank_accounts
+where account_number = '28296815'

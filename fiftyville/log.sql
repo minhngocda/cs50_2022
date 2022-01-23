@@ -15,6 +15,8 @@ join bakery_security_logs on people.license_plate = bakery_security_logs.license
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;
 
+--I don't know the thief's name, but it was someone I recognized. Earlier this morning,
+--before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
 select transaction_type, account_number from atm_transactions where month = 7 and day = 28 and year = 2021
 and atm_location = 'Leggett Street' and transaction_type = 'withdraw';
 

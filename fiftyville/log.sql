@@ -12,7 +12,7 @@ join bakery_security_logs on people.license_plate = bakery_security_logs.license
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10
 
-where id = (inner join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
+where id = (select person_id from bank_account join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
 where atm_transactions.month = 7 and atm_transactions.day = 28 and atm_transactions.year = 2021
 and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transaction_type = 'withdraw');
 

@@ -4,24 +4,6 @@
 | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery. |
 | Littering took place at 16:36. No known witnesses.                                                                                                                                                                       |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+---------------+
-| license_plate |
-+---------------+
-| R3G7486       |
-| 13FNH73       |
-| 5P2BI95       |
-| 94KL13X       |
-| 6P58WS2       |
-| 4328GD8       |
-| G412CB7       |
-| L93JTIZ       |
-| 322W7JE       |
-| 0NTHK55       |
-| 1106N58       |
-| NRYN856       |
-| WD5M8I6       |
-| V47T75I       |
-+---------------+
 +-----------------+---------+
 | passport_number |  name   |
 +-----------------+---------+

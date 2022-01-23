@@ -7,5 +7,6 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 
 
 select id from people
-join people on people.license_plate = bakery_security_logs.license_plate
-where bakery_security_logs.month = 7 and bakery_security_logs.day = 28 and bakery_security_logs.year = 2021 and bakery_security_logs. hour = 10;
+join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
+where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
+and bakery_security_logs.year = 2021 and bakery_security_logs. hour = 10;

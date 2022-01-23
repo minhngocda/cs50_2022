@@ -6,5 +6,6 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 |-- Littering took place at 16:36. No known witnesses.
 
 
-select activity, license_plate, hour, minute from bakery_security_logs
+select id from people
+join people on people.license_plate = bakery_security_logs
 where month = 7 and day = 28 and year = 2021 and hour = 10;

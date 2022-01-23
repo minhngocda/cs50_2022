@@ -7,10 +7,11 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 
 
 -- show people whose car at 10 a.m in/out bakery
-select passport_number,name from people
-inner join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
+select people.passport_number, people.name, people.id from people
+join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10
+;
 
 select people.id from people
 inner join people on people.id=bank_account.person_id

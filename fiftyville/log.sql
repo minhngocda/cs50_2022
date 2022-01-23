@@ -3,5 +3,5 @@
 select description from crime_scene_reports
 where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 
-select activity from bakery_security_logs
+select activity, license_plate, hour, minute from bakery_security_logs
 where month = 7 and day = 28 and year = 2021 and hour = 10;

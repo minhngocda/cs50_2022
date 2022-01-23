@@ -9,6 +9,9 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 select license_plate from bakery_security_logs
 --join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
-and bakery_security_logs.year = 2021 and bakery_security_logs. hour = 10;
+and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;
 
-select id from people where license_plate = 'R3G7486';
+select name from people
+join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
+where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
+and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;

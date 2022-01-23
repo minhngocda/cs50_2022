@@ -15,3 +15,6 @@ select passport_number,name from people
 join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;
+
+select transaction_type, account_number from atm_transactions where month = 7 and day = 28 and year = 2021
+and atm_location = 'Leggett Street' and transaction_type = 'withdraw';

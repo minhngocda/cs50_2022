@@ -11,7 +11,7 @@ select license_plate from bakery_security_logs
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;
 
-select * from people
+select id from people
 join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
 where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
 and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;

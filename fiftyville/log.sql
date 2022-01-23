@@ -17,10 +17,11 @@ and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10;
 
 --I don't know the thief's name, but it was someone I recognized. Earlier this morning,
 --before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+-- this show personal_id of people who withdraw money on that day
 select person_id from bank_accounts
 join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
-where account_number  month = 7 and day = 28 and year = 2021
-and atm_location = 'Leggett Street' and transaction_type = 'withdraw');
+where atm_transactions.month = 7 and atm_transactions.day = 28 and atm_transactions.year = 2021
+and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transaction_type = 'withdraw';
 
 select transcript from interviews where month = 7 and day = 28 and year = 2021;
 

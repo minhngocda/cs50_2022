@@ -10,7 +10,7 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
   --  select people.passport_number, people.name, people.id from people
     --join bakery_security_logs on people.license_plate = bakery_security_logs.license_plate
   --  where bakery_security_logs.month = 7 and bakery_security_logs.day = 28
-  --  and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10
+  --  and bakery_security_logs.year = 2021 and bakery_security_logs.hour = 10 
   --  order by people.name;
 
 --I don't know the thief's name, but it was someone I recognized. Earlier this morning,

@@ -42,13 +42,15 @@ SELECT BANK.passport_number , BANK.name , BANK.id, flights.id FROM BANK
 join passengers on BANK.passport_number = passengers.passport_number
 join flights on flights.id = passengers.flight_id
 join airports on flights.origin_airport_id = airports.id
-where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29;
+where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
+order by flights.hour, flights.minute asc;
 
 SELECT CAR.passport_number , CAR.name, CAR.id FROM CAR
 JOIN passengers on CAR.passport_number = passengers.passport_number
 join flights on flights.id = passengers.flight_id
 join airports on flights.origin_airport_id = airports.id
-where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29;
+where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
+order by flights.hour, flights.minute asc;
 
 select caller, receiver, duration from phone_calls
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
@@ -69,7 +71,7 @@ select passport_number from passengers
 join flights on flights.id = passengers.flight_id
 join airports on flights.origin_airport_id = airports.id
 where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
-order by flights.hour asc;
+order by flights.hour, flights.minute asc LIMIT 1 asc;
 
 
 

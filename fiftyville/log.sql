@@ -26,7 +26,7 @@ CREATE TABLE BANK AS
 
  --I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour
 --As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
--- combine 2 table CAR and BANK
+-- combine 2 table CAR and BANK, show who have at least 2 phone calls on that day
 SELECT BANK.passport_number , BANK.name , BANK.id FROM BANK
 join CAR on CAR.id = BANK.id
 join phone_calls on BANK.phone_number = phone_calls.caller

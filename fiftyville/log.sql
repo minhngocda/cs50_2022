@@ -17,7 +17,7 @@ CREATE TABLE CAR AS
 --before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
 -- this show personal_id of people who withdraw money on that day
 CREATE TABLE BANK AS
-    select people.passport_number, people.name, people.id from people
+    select people.passport_number, people.name, people.id, people.phone_number from people
     join bank_accounts on bank_accounts.person_id = people.id
     join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
     where atm_transactions.month = 7 and atm_transactions.day = 28 and atm_transactions.year = 2021
@@ -46,5 +46,3 @@ select transcript from interviews where month = 7 and day = 28 and year = 2021;
 
 --2 phone calls on that day morning, less than a minute and about half an hour
 
-INSERT INTO BANK
-SELECT phone_number FROM people;

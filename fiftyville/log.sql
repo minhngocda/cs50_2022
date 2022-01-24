@@ -28,11 +28,10 @@ where month = 7 and day = 28 and year = 2021 and street = 'Humphrey Street';
 --As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- combine 2 table CAR and BANK, show who have at least 2 phone calls on that day
 SELECT BANK.passport_number , BANK.name , BANK.id FROM BANK--( phone_calls.caller, phone_calls.receiver)--
-join CAR on CAR.id = BANK.id;
+join CAR on CAR.id = BANK.id
 join phone_calls on BANK.phone_number = phone_calls.caller
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
-group by(phone_callsclear.caller)
-having count(phone_calls.caller) >=2;
+and phone_calls.duration <60;
 
 --join passengers on BANK.passport_number = passengers.passport_number
 --join flights on flights.id = passengers.flight_id

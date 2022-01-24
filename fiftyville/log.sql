@@ -29,7 +29,10 @@ CREATE TABLE BANK AS
 -- combine 2 table CAR and BANK
 SELECT BANK.passport_number , BANK.name , BANK.id FROM BANK
 join CAR on CAR.id = BANK.id
-join phone_calls on ;
+join phone_calls on BANK.phone_number = phone_calls.caller
+where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
+group by(caller)
+having count(caller) >=2;
 
 select caller, receiver, duration from phone_calls
 

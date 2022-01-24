@@ -47,5 +47,4 @@ select transcript from interviews where month = 7 and day = 28 and year = 2021;
 --2 phone calls on that day morning, less than a minute and about half an hour
 
 INSERT INTO BANK
-SELECT phone_number FROM people
-WHERE people.id = BANK.id;
+SELECT phone_number FROM people;

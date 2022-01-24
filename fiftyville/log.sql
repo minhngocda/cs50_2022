@@ -31,7 +31,7 @@ SELECT BANK.passport_number , BANK.name , BANK.id FROM BANK--( phone_calls.calle
 join CAR on CAR.id = BANK.id
 join phone_calls on BANK.phone_number = phone_calls.caller
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
-and phone_calls.duration <60;
+and phone_calls.duration < 60;
 
 --join passengers on BANK.passport_number = passengers.passport_number
 --join flights on flights.id = passengers.flight_id

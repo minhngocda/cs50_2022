@@ -43,8 +43,6 @@ select caller, receiver, duration from phone_calls
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
 and caller = '(367) 555-5533';
 
-select caller, duration from phone_calls
-;
 --search for flight on the next day from fiftyville
 select flights.id, flights.destination_airport_id, flights.day, flights.hour, flights.minute from flights
 join airports on flights.origin_airport_id = airports.id

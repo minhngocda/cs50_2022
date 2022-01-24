@@ -48,7 +48,14 @@ select flights.id, flights.destination_airport_id, flights.day, flights.hour, fl
 join airports on flights.origin_airport_id = airports.id
 where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
 order by flights.hour asc;
---
+
+-- search for passport of passenger flight on that day from fiftyville
+select passport_number from passengers
+join flights on flights.id = passengers.flight_id
+join airports on flights.origin_airport_id = airports.id
+where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
+order by flights.hour asc;
+
 
 
 

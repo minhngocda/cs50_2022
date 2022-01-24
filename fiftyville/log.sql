@@ -46,7 +46,7 @@ and caller = '(367) 555-5533';
 select caller, duration from phone_calls
 ;
 --search for flight on the next day from fiftyville
-select flights.id, flights.day, flights.hour, flights.minute from flights
+select flights.id, flights.destination_airport_id, flights.day, flights.hour, flights.minute from flights
 join airports on flights.origin_airport_id = airports.id
 where airports.city = 'Fiftyville' and flights.year = 2021 and flights.month = 7 and flights.day = 29
 order by flights.hour asc;

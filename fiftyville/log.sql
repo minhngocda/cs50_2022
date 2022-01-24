@@ -32,7 +32,9 @@ join CAR on CAR.id = BANK.id
 join phone_calls on BANK.phone_number = phone_calls.caller
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
 group by(caller)
-having count(caller) >=2
+having count(caller) >=2;
+
+SELECT BANK.passport_number , BANK.name , BANK.id FROM BANK
 join passengers on BANK.passport_number = passengers.passport_number
 join flights on flights.id = passengers.flight_id
 join airports on flights.origin_airport_id = airports.id

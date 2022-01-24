@@ -34,9 +34,14 @@ where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
 group by(caller)
 having count(caller) >=2;
 
+
 select caller, receiver, duration from phone_calls
 where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
 and caller = '(286) 555-6063';
+
+select caller, receiver, duration from phone_calls
+where phone_calls.year = 2021 and phone_calls.month = 7 and phone_calls.day = 28
+and caller = '(367) 555-5533';
 
 select caller, duration from phone_calls
 ;

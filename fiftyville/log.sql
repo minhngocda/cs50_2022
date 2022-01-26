@@ -10,4 +10,8 @@ AND phone_number IN
 WHERE phone_calls.year=2021 and phone_calls.month=7 and phone_calls.day=28 and phone_calls.duration<60)
 --using atm transaction, bank accounts to find id of people who withdraw money from ATM on Legget Street
 AND people.id IN
-(SELECT )
+(SELECT person_id FROM bank_accounts
+JOIN atm_transactions ON bank_accounts.account_number=atm_transactions.account_number
+WHERE atm_transactions.year=2021 and atm_transactions.month=7 and atm_transactions.day=28
+and atm_transactions.atm_location = 'Legget Street' and atm_transactions.transaction_type = 'withdraw')
+;

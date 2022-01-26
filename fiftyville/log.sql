@@ -18,8 +18,8 @@ WHERE people.passport_number IN
 (SELECT passport_number FROM passengers
 JOIN flights ON flights.id = passengers.flight_id
 WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
-and flights.origin_airport_id = (SELECT id FROM airports WHERE airports.city = 'Fiftyville' )
-ORDER BY flights.hour and flights.minute ASC )
+and flights.origin_airport_id = (SELECT id FROM airports WHERE airports.city = 'Fiftyville'
+ORDER BY flights.hour and flights.minute ASC ))
 
 
 

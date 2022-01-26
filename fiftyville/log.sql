@@ -29,7 +29,22 @@ and flights.origin_airport_id in (SELECT id FROM airports WHERE airports.city = 
 ORDER BY flights.hour and flights.minute ASc limit 1);
 
 
-
+-- Get the accomplice's name
+SELECT name FROM people
+-- Using their phone number
+WHERE phone_number IN (
+    -- From the list of phone calls
+    SELECT receiver FROM phone_calls
+    -- On the date of the crime
+    WHERE year = 2021 AND month = 7 AND day = 28
+    -- And where the caller was our criminal
+    AND caller = (
+        -- Diana is a prick
+        SELECT phone_number FROM people WHERE name = "Diana"
+    )
+    -- And to reduce the likelihood of getting more than one result, let's constrain it a little more
+    AND duration < 60
+);
 
 
 

@@ -14,12 +14,12 @@ AND people.id IN
 JOIN atm_transactions ON bank_accounts.account_number=atm_transactions.account_number
 WHERE atm_transactions.year=2021 and atm_transactions.month=7 and atm_transactions.day=28
 and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transaction_type = 'withdraw');
-AND people.passport_number IN
+WHERE people.passport_number IN
 (SELECT passport_number FROM passengers
 JOIN flights ON flights.id = passengers.flight_id
 WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
 and flights.origin_airport_id = (SELECT id FROM airports WHERE airports.city = 'Fiftyville' )
-ORDER BY flights.hour and flights.minute ASC LIMIT 1 )
+ORDER BY flights.hour and flights.minute ASC )
 
 
 

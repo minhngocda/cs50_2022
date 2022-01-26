@@ -3,7 +3,7 @@ SELECT name FROM people
 WHERE people.license_plate IN
 (SELECT license_plate FROM bakery_security_logs
 WHERE bakery_security_logs.year=2021 and bakery_security_logs.month=7 and bakery_security_logs.day=28
-and bakery_security_logs.hour=10 and bakery_security_logs.minute > 20)
+and bakery_security_logs.hour=10 and bakery_security_logs.minute > 15)
 -- using phone calls to find our phone number that have a call on that day less thang 1 minute
 AND people.phone_number IN
 (SELECT caller FROM phone_calls
@@ -39,8 +39,8 @@ WHERE phone_number IN (
     WHERE year = 2021 AND month = 7 AND day = 28
     -- And where the caller was our criminal
     AND caller = (
-        -- Taylor is a prick
-        SELECT phone_number FROM people WHERE name = "Taylor"
+        -- Bruce is a prick
+        SELECT phone_number FROM people WHERE name = "Bruce"
     )
     -- And to reduce the likelihood of getting more than one result, let's constrain it a little more
     AND duration < 60

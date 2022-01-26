@@ -17,7 +17,8 @@ and atm_transactions.atm_location = 'Leggett Street' and atm_transactions.transa
 AND people.passport_number IN
 (SELECT passport_number FROM passengers
 JOIN flights ON flights.id = passengers.flight_id
-WHERE )
+WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
+and flights.origin_airport_id = (SELECT id FROM airports WHERE airports.city =  ) )
 
 
 

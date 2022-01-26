@@ -26,7 +26,7 @@ SELECT city FROM airports
 WHERE id IN
 (SELECT destination_airport_id FROM flights WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
 and flights.origin_airport_id in (SELECT id FROM airports WHERE airports.city = 'Fiftyville')
-ORDER BY flights.hour and flights.minute ASc limit 1);
+ORDER BY flights.hour and flights.minute);
 
 
 -- Get the accomplice's name

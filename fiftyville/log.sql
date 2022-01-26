@@ -20,13 +20,13 @@ AND people.passport_number IN
 WHERE flight_id IN
 (SELECT id FROM flights WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
 and flights.origin_airport_id in (SELECT id FROM airports WHERE airports.city = 'Fiftyville')
-ORDER BY flights.hour and flights.minute ASc limit 1) );
+ORDER BY flights.hour, flights.minute ASc limit 1) );
 
 SELECT city FROM airports
 WHERE id IN
 (SELECT destination_airport_id FROM flights WHERE flights.year = 2021 and flights.month = 7 and flights.day = 29
 and flights.origin_airport_id in (SELECT id FROM airports WHERE airports.city = 'Fiftyville')
-ORDER BY flights.hour and flights.minute asc);
+ORDER BY flights.hour, flights.minute asc limit 1);
 
 
 -- Get the accomplice's name
@@ -39,8 +39,8 @@ WHERE phone_number IN (
     WHERE year = 2021 AND month = 7 AND day = 28
     -- And where the caller was our criminal
     AND caller = (
-        -- Diana is a prick
-        SELECT phone_number FROM people WHERE name = "Diana"
+        -- Taylor is a prick
+        SELECT phone_number FROM people WHERE name = "Taylor"
     )
     -- And to reduce the likelihood of getting more than one result, let's constrain it a little more
     AND duration < 60

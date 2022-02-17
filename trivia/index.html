@@ -6,7 +6,17 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
+            // run script once DOM is loaded
+            document.addEventlistener('DOMContentLoaded', function() {
+
+                //when correct answer is clicked, change coler to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+                
+
         </script>
     </head>
     <body>

@@ -39,5 +39,5 @@ def index():
         return redirect("/")
 
     else:
-        peoples = db.execute("SELECT * FROM birthdays;")
-        return render_template("index.html",peoples=peoples)
+        birthdays = db.execute("SELECT * FROM birthdays;")
+        return render_template("index.html", birthdays=birthdays)

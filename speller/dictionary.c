@@ -72,7 +72,7 @@ bool load(const char *dictionary)
     {
         //create new node
         node *new_node = malloc(sizeof(node));
-        IF (new_node == NULL)
+        if (new_node == NULL)
         {
             return false;
         }

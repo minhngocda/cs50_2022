@@ -4,6 +4,11 @@
 
 #include "dictionary.h"
 
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 // Represents a node in a hash table
 typedef struct node
 {

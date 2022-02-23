@@ -54,8 +54,8 @@ bool load(const char *dictionary)
             return false;
         }
         // copy over the word
-        strcpy(n -> word, word);
-        new_node -> next
+        strcpy(n->word, word);
+        new_node->next
 
     }
     return false;

@@ -22,8 +22,11 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    return false;
+    for(int i = 0; i<strlen(word);i++)
+    {
+        sum += word[i];
+    }
+    return (sum % N);
 }
 
 // Hashes word to a number

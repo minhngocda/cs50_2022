@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
 
     // Load dictionary
     getrusage(RUSAGE_SELF, &before);
+    printf("_______NAMHERE__________________");
     bool loaded = load(dictionary);
+    printf("_______NgocNgoc__________________");
     getrusage(RUSAGE_SELF, &after);
 
     // Exit if dictionary not loaded

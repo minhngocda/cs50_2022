@@ -99,6 +99,19 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // print link list
+    for (int i = 0; i<N; i++)
+    {
+        node *head = table[i];
+        node *cursor = head;
+        node *tmp = head;
+
+        while ()
+        {
+            cursor = cursor->next;
+            free(tmp);
+            tmp = cursor;
+        }
+    }
     return false;
 }

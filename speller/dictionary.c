@@ -36,7 +36,27 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    //open the dictionary
+    FILE *file = fopen(dictionary,"r");
+    if (file == NULL)
+    {
+        return false;
+    }
+
+    //read one by one word
+    char word[LENGTH + 1]
+    while (fscanf(file,%s, word)!= EOF )
+    {
+        //create new node
+        node *new_node = malloc(sizeof(node));
+        IF (new_node == NULL)
+        {
+            return false;
+        }
+        // copy over the word
+        
+
+    }
     return false;
 }
 

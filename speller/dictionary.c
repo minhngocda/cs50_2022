@@ -23,7 +23,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-
+    int index = hash(word)
 }
 
 // Hashes word to a number
@@ -33,10 +33,10 @@ unsigned int hash(const char *word)
     int sum = 0;
     for(int i = 0; i<strlen(word);i++)
     {
-        sum += word[i];
+        sum += tolower(word[i]);
     }
     return (sum % N);
-    return toupper(word[0]) - 'A';
+  //  return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false

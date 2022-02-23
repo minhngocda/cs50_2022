@@ -8,7 +8,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char word[LENGTH + 1] * 'z';
+    char word[LENGTH + 1];
     struct node *next;
 }
 node;
@@ -23,7 +23,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int index = hash(word)
+    int index = hash(word);
 
     node *cursor = table[index];
     while (cursor != NULL)

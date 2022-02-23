@@ -92,6 +92,7 @@ bool load(const char *dictionary)
         }
         total_word++;
     }
+    fclose(file);
     return true;
 }
 

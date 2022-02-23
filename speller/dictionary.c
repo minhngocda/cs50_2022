@@ -54,15 +54,19 @@ bool load(const char *dictionary)
             return false;
         }
         // copy over the word
-        strcpy(n- >word, word);
-        new_node- >next = NULL;
+        strcpy(n->word, word);
+        new_node->next = NULL;
 
         int index = hash(word);
         if(table[index] == NULL)
         {
             table[index] = new_node;
         }
-
+        else
+        {
+            new_node->next = table[index];
+            table[index] = new_node;
+        }
     }
     return false;
 }

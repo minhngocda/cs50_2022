@@ -40,7 +40,7 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
-
+    return false;
 }
 
 // Hashes word to a number

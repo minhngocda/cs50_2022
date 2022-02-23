@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./speller [DICTIONARY] text\n");
         return 1;
     }
-
     // Structures for timing data
     struct rusage before, after;
 

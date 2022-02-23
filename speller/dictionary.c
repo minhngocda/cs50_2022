@@ -77,7 +77,7 @@ bool load(const char *dictionary)
             return false;
         }
         // copy over the word
-        strcpy(n->word, word);
+        strcpy(new_node->word, word);
         new_node->next = NULL;
 
         int index = hash(word);

@@ -106,12 +106,12 @@ bool unload(void)
         node *cursor = head;
         node *tmp = head;
 
-        while ()
+        while (cursor != NULL)
         {
             cursor = cursor->next;
             free(tmp);
             tmp = cursor;
         }
     }
-    return false;
+    return true;
 }

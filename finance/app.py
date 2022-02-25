@@ -40,9 +40,8 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Create new table, and index (for efficient search later on) to keep track of stock orders, by each user
-db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, \
-            shares NUMERIC NOT NULL, price NUMERIC NOT NULL, timestamp TEXT, PRIMARY KEY(id), \
-            FOREIGN KEY(user_id) REFERENCES users(id))")
+db.execute(("CREATE TABLE 'orders' (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL,'timestamp' DATETIME, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
+
 db.execute("CREATE INDEX IF NOT EXISTS orders_by_user_id_index ON orders (user_id)")
 
 # Make sure API key is set

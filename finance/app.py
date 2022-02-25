@@ -127,8 +127,8 @@ def register():
     username = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
-    print("@@@@@@@@@" + password)
-    print("&&&&&&&&&&" + confirmation)
+    print("@@@@@@@@@" + str(password))
+    print("&&&&&&&&&&" + str(confirmation))
     if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
         return apology("Invalid Username: Blank, or already exists")
     if password == "" or password != confirmation:

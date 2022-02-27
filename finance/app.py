@@ -114,9 +114,9 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
-        result_check = is_provided("symbol")
+        """result_check = is_provided("symbol")
         if result_check is not None:
-            return result_check
+        return result_check"""
         symbol = request.form.get("symbol").upper()
         result = lookup(symbol)
         if result is None:

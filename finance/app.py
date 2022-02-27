@@ -119,7 +119,8 @@ def quote():
         return result_check"""
         symbol = request.form.get("symbol")
         result = lookup(symbol)
-        print("@@@@" + result)
+        print("@@@@@@@@@")
+        print(result)
         if result is None:
             return apology("invalid symbol", 400)
         return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])

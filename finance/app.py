@@ -117,7 +117,7 @@ def quote():
         """result_check = is_provided("symbol")
         if result_check is not None:
         return result_check"""
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
         result = lookup(symbol)
         if result is None:
             return apology("invalid symbol", 400)

@@ -15,10 +15,10 @@
             </tr>
             {% for stock in stocks %}
                 <tr>
-                    <td>{{ stock['date'] }}</td>
-                    <td>{{ stock['stock'].upper() }}</td>
-                    <td>{{ stock['quantity'] }}</td>
-                    <td>{{ usd(stock['price']) }}</td>
+                    <td>{{ rows['date'] }}</td>
+                    <td>{{ rows['stock'].upper() }}</td>
+                    <td>{{ rows['quantity'] }}</td>
+                    <td>{{ usd(rows['price']) }}</td>
                 </tr>
             {% endfor %}
         </table>

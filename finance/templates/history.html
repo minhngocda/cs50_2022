@@ -14,9 +14,9 @@
         </tr>
         {% for rows in rows %}
         <tr>
-            <td>{{'time'}}</td>
-            <td>{{'symbol.upper()'}}</td>
-            <td>{{'shares'}}</td>
+            <td>{{rows['timestamp']}}</td>
+            <td>{{rows['symbol'].upper()}}</td>
+            <td>{{rows['shares']}}</td>
             <td>{{'price'}}</td>
         </tr>
         {% endfor %}

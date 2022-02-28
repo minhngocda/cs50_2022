@@ -15,8 +15,8 @@
             </tr>
             {% for stock in stocks %}
                 <tr>
-                    <td>{{ rows['timestamp'] }}</td>
-                    <td>{{ rows['symbol'].upper() }}</td>
+                    <td>{{ rows['timestamp']}}</td>
+                    <td>{{ rows['symbol'].upper()}}</td>
                     <td>{{ rows['shares'] }}</td>
                     <td>{{ usd(rows['price']) }}</td>
                 </tr>

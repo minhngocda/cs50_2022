@@ -13,8 +13,8 @@
             <th>Share Price</th>
         </tr>
         {% for rows in rows %}
-        <tr>
-            <td>{{rows['timestamp']}}</td>
+        <tr>symbol = rows["symbol"], price = usd(rows["price"]), shares = rows["shares"], time = rows["timestamp"])
+            <td>{{timestamp}}</td>
             <td>{{rows['symbol'].upper()}}</td>
             <td>{{rows['shares']}}</td>
             <td>{{rows['price']}}</td>

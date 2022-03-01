@@ -40,7 +40,18 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-
+def own_shares():
+    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
+    user_id = session["user_id"]
+    owns = {}
+    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
+    for q in query:
+        symbol, shares = q["symbol"], q["shares"]
+        owns[symbol] = owns.setdefault(symbol, 0) + shares
+    # filter zero-share stocks
+    owns = {k: v for k, v in owns.items() if v != 0}
+    return owns
+    
 @app.route("/")
 @login_required
 def index():

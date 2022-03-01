@@ -91,7 +91,7 @@ def buy():
     # check if user can afford the purchase
     remain = cash - price * shares
     if remain < 0:
-        return apology("Insufficient Cash. Failed Purchase.")
+        return apology("can't afford.", 400)
 
     # deduct order cost from user's remaining balance (i.e. cash)
     db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)

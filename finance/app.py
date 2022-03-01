@@ -52,7 +52,7 @@ def own_shares():
     owns = {k: v for k, v in owns.items() if v != 0}
     return owns
 
-@app.route("/"
+@app.route("/")
 @login_required
 def index():
     """Show portfolio of stocks"""

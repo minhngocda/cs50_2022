@@ -85,7 +85,7 @@ def buy():
     name = result["name"]
     price = result["price"]
     symbol = result["symbol"]
-    shares = int(request.form.get("shares")) # Don't forget: convert str to int
+    shares = int(request.form.get("shares")) #convert str to int
     user_id = session["user_id"]
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
     # check if user can afford the purchase

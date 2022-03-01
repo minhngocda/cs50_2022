@@ -14,15 +14,15 @@
         <th colspan="2"> Price (USD) </th>
         <th colspan="2"> Total (USD) </th>
     </tr>
-        {% for symbol, values in owns.items() %}
+    {% for symbol, values in owns.items() %}
     <tr>
         <td> {{ symbol }} </td>
-        <td>  {{ values[0] }}  </td>
-        <td>  {{ values[1] }}  </td>
-        <td>  {{ values[2] }}  </td>
-        <td>  {{ values[3] }}  </td>
+        <td> {{ values[0] }} </td>
+        <td> {{ values[1] }} </td>
+        <td> {{ values[2] }} </td>
+        <td> {{ values[3] }} </td>
     </tr>
-        {% endfor %}
+    {% endfor %}
         <tr>
             <th scope='row' colspan='4'> Cash </th>
                 <td> {{cash}} </td>

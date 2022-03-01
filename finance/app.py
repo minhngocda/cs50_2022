@@ -204,4 +204,24 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    owns = own_shares()
+    if request.method == "GET":
+        return render_template("sell.html", owns = owns.keys())
+
+    symbol = request.form.get("symbol")
+    shares = int(request.form.get("shares")) # Don't forget: convert str to int
+    # check whether there are sufficient shares to sell
+    if owns[symbol] < shares:
+        return render_template("sell.html", invalid=True, symbol=symbol, owns = owns.keys())
+    # Execute sell transaction: look up sell price, and add fund to cash,
+    result = lookup(symbol)
+    user_id = session["user_id"]
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
+    price = result["price"]
+    remain = cash + price * shares
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
+    # Log the transaction into orders
+    db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
+                                     user_id, symbol, -shares, price, time_now())
+
+    return redirect("/")

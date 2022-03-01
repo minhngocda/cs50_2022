@@ -222,6 +222,6 @@ def sell():
     db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
     # Log the transaction into orders
     db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
-                                     user_id, symbol, -shares, price, time_now())
+                                     user_id, symbol, -shares, price, datetime.now())
 
     return redirect("/")

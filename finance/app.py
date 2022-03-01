@@ -79,7 +79,7 @@ def buy():
 
     if not request.form.get("symbol"):
         return apology("mising symbol", 400)
-    if not request.form.get("amount") or request.form.get("amount") < 1:
+    if not request.form.get("shares"):
         return apology("missing shares", 403)
 
     result = lookup(request.form.get("symbol"))

@@ -6,47 +6,13 @@
 
 {% block main %}
 
-<style>
-
-table {
-    width: 688px; /* 688 = column widths 80 + 56 + 280 + 120 + 56 + 96 */
-    table-layout: fixed;
-    font: 12px Courier;
-    border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-tbody {
-  display: block;
-  width: 703px; /* 703 = 688 table width + 15 extra for scrollbar */
-  overflow-y: scroll;
-  height: 65px;
-}
-
-thead tr { display: block; }
-
-tr:nth-child(even) { background-color: #eee; }
-
-th:nth-child(1), td:nth-child(1) {text-align: right; width:  80px; }
-th:nth-child(2), td:nth-child(2) {text-align: left;  width:  56px; }
-th:nth-child(3), td:nth-child(3) {text-align: left;  width: 280px; }
-th:nth-child(4), td:nth-child(4) {text-align: left;  width: 120px; }
-th:nth-child(5), td:nth-child(5) {text-align: right; width:  56px; }
-th:nth-child(6), td:nth-child(6) {text-align: left;  width:  96px; }
-
-</style>
-
     <table class="table">
     <tr>
-        <th colspan="2"> Symbol </th>
-        <th colspan="2"> Name </th>
-        <th colspan="2"> Shares </th>
-        <th colspan="2"> Price (USD) </th>
-        <th colspan="2"> Total (USD) </th>
+        <th> Symbol </th>
+        <th> Name </th>
+        <th> Shares </th>
+        <th> Price (USD) </th>
+        <th> Total (USD) </th>
     </tr>
     {% for symbol, values in owns.items() %}
     <tr>

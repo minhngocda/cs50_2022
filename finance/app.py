@@ -77,6 +77,11 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+    if not request.form.get("symbol"):
+        return apology("mising symbol", 400)
+    if not request.form.get("amount") or request.form.get("amount") < 1:
+        return apology("missing shares", 403)
+
     result = lookup(request.form.get("symbol"))
     if not result:
         return apology("invalid symbol", 400)

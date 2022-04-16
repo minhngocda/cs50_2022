@@ -16,6 +16,3 @@ for movie_id in range(11,996):
 
 df = pd.DataFrame.from_dict(response_list)
 df.to_csv('original_data.csv', index=False)
-
-file = pd.read_csv("original_data.csv")
-file.to_html("original_data.html")

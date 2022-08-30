@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+    <tr>
+        <th> Symbol </th>
+        <th> Name </th>
+        <th> Shares </th>
+        <th> Price (USD) </th>
+        <th> Total (USD) </th>
+    </tr>
+    {% for symbol, values in owns.items() %}
+    <tr>
+        <td> {{ symbol }} </td>
+        <td> {{ values[0] }} </td>
+        <td> {{ values[1] }} </td>
+        <td> {{ values[2] }} </td>
+        <td> {{ values[3] }} </td>
+    </tr>
+    {% endfor %}
+        <tr>
+            <th scope='row' colspan='4'> Cash </th>
+                <td> {{cash}} </td>
+        </tr>
+        <tr>
+            <th scope='row' colspan='4'> TOTAL </th>
+                <td> {{total}} </td>
+        </tr>
+    </table>
+{% endblock %}
